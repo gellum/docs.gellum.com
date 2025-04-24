@@ -58,14 +58,14 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Gellum.com",
-      "href": "https://gellum.com"
+      "label": "Mi cuenta",
+      "href": "https://gellum.com/mi-cuenta"
     }
   },
   "footer": {
     "socials": {
-      "x-twitter": "https://x.com/gellum_com",
-      "website": "https://gellum.com/blog"
+      "website": "https://gellum.com/blog",
+      "x-twitter": "https://x.com/gellum_com"
     }
   }
 }

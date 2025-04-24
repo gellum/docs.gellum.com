@@ -22,8 +22,8 @@
           {
             "group": "Correo Electrónico",
             "pages": [
-              "email/configurar-servidor",
-              "email/webmail"
+              "email/webmail",
+              "email/configurar-servidor"
             ]
           }
         ]

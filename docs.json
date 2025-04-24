@@ -90,7 +90,7 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/gellum_com",
+      "x-twitter": "https://x.com/gellum_com",
       "wordpress": "https://gellum.com/blog"
     }
   }

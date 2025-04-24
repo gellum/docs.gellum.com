@@ -16,10 +16,7 @@
           {
             "group": "Iniciemos",
             "pages": [
-              "introduction",
-              "quickstart",
-              "development",
-              "hola-mundo"
+              "introduccion"
             ]
           },
           {

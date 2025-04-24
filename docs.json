@@ -23,8 +23,10 @@
           {
             "group": "Correo Electrónico",
             "pages": [
+              "email/registros",
               "email/webmail",
-              "email/configurar-servidor"
+              "email/configurar-servidor",
+              "email/limites-de-envio"
             ]
           }
         ]

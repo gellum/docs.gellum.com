@@ -1,0 +1,50 @@
+---
+title: "Registros DNS"
+description: "Configuración inicial de los DNS de su dominio para empezar a recibir correos electrónicos a través de Gellum."
+---
+
+## Pre-requisitos
+
+- **Dificultad:** Moderada
+- **Tiempo necesario:** 15 min para configurar y 24 a 48 horas adicionales para prograpar los registros DNS.
+- **Herramientas:** Acceso de administrador al HOST DNS.
+
+<Tip>
+  Si no sabe cuál es su host de DNS, [consulte este artículo](/email/buscar-host-dns).
+</Tip>
+
+## Tipos de entradas DNS
+
+Entradas DNS necesarias para el correcto funcionamiento de los servicios de correo electrónico:
+
+- **Registros MX:** indica a los proveedores de correo electrónico donde enviar los correos.
+- **Registros SPF:** reducen el SPAM no deseado y protegen contra suplantación de identidad de su dominio. (Garantiza que los correos electrónicos salientes sean entregados).
+- **Registro de Autodetección:** Permite la funcionabilidad de calendario y simplifica la configuración de [clientes de correos electrónicos](/email/configurar-servidor) como Gmail, Outlook, Thunderbird, Mail de iOS y otros.
+
+## Configuración DNS para enviar y recibir correos electrónicos
+
+<Steps>
+  <Step title="Panel de Host DNS">
+    Inicie sesión en el panel de control de su host de DNS y busque el domingo designado para su correo.
+  </Step>
+  <Step title="Configure los registros DNS">
+    Incluya las entradas de la siguiente tabla. 
+
+    <Warning>
+      **Verifique** de que no existan otras entradas de registro MX; de lo contrario tendrá problemas con su correo electrónico.
+    </Warning>
+    | Tipo  | Host                | Destino                                | Prioridad | Tiempo de vida                      |
+    | ----- | ------------------- | -------------------------------------- | --------- | ----------------------------------- |
+    | MX    | @ o dejar en blanco | **mx1.emailsrvr.com**                  | 10        | 3600 segundos o el mínimo permitido |
+    | MX    | @ o dejar en blanco | **mx1.emailsrvr.com**                  | 10        | 3600 segundos o el mínimo permitido |
+    | TXT   | @ o dejar en blanco | **v=spf1 include:emailsrvr.com ~all	** | N/A       | 3600 segundos o el mínimo permitido |
+    | CNAME | autodiscover        | **autodiscover.emailsrvr.com**         | N/A       | 3600 segundos o el mínimo permitido |
+  </Step>
+  <Step title="Guarde los cambios">
+    Una vez que haya finalizado con la configuración DNS para su dominio, guarde los cambios y espere la propagación DNS.
+  </Step>
+</Steps>
+
+<Warning>
+  **IMPORTANTE:** Si cambia la configuración DNS de un dominio que alojaba el correo electrónico en otro proveedor, deberá reconfigurar todos los clientes de correo electrónico y dispositivos del usuario para que apunten correctamente a nuestros servidores. Puede enviar a sus usuarios a [Configuración IMAP, POP, SMTP](/email/configurar-servidor) para ayudarlos con la nueva configuración.
+</Warning>

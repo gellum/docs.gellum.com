@@ -23,14 +23,9 @@
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Correo Electrónico",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "email/configurar-cliente"
             ]
           }
         ]

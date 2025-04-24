@@ -59,14 +59,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://docs.gellum.com",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "anchor": "Planes",
+          "href": "https://gellum.com/planes",
+          "icon": "dollar-sign"
         },
         {
           "anchor": "Blog",
@@ -83,21 +78,20 @@
   "navbar": {
     "links": [
       {
-        "label": "Soporte",
-        "href": "mailto:hola@gellum.com"
+        "label": "Contacto",
+        "href": "https://gellum.com/contacto"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Gellum",
+      "label": "Gellum.com",
       "href": "https://gellum.com"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/gellum_com",
+      "wordpress": "https://gellum.com/blog"
     }
   }
 }

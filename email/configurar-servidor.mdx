@@ -28,3 +28,108 @@ Además necesitará usar su usuario y contraseña en los siguientes campos:
 | Nombre de usuario               | Contraseña                 |
 | ------------------------------- | -------------------------- |
 | Tu dirección de correo completa | La contraseña de tu correo |
+
+## Configuración para Cliente de Correo
+
+### Gmail
+
+Este proceso se debe realizar desde un navegador web en computadora
+
+ 1. Cuando haya iniciado sesión en su cuenta de Gmail, haga clic en Configuración, normalmente representado con el ícono de una "tuerca".\
+    ![1 Gmail Pn](/images/1-gmail.png)
+ 2. Luego aparecerá un menú desplegable, haga clic en "**Ver todas las configuraciones**".\
+    ![2 Gmail Pn](/images/2-gmail.png)
+ 3. En la página de "**Configuraciones**", haga clic en "**Cuentas e Importación**" y luego en "**Agregar otra dirección de correo electrónico**". Esto le abrirá una ventana emergente.\
+    ![3 Gmail Pn](/images/3-gmail.png)
+ 4. Aquí debe ingresar la siguiente información:\
+    **Nombre:** el nombre que desea que se muestre en los correos, puede ser su nombre y apellido, el nombre de su empresa o su nombre y el nombre de su empresa.\
+    **Dirección de correo:** aquí ingresa el correo electrónico que desea configurar.\
+    **Tratar como un alias:** Debe desmarcar esta opción. ([visite este artículo](https://support.google.com/a/answer/1710338) para más información).\
+    \
+    Luego de completar los campos, haga clic en **Siguiente paso**.\
+    ![4 Gmail Pn](/images/4-gmail.png)
+ 5. Ahora debe ingresar la [información de nuestro servidor](#%C2%BFc%C3%B3mo-configurar-mi-cliente-de-correo-electr%C3%B3nico-con-gellum-mailbox%3F).\
+    \
+    **Servidor SMTP:** secure.emailsrvr.com\
+    **Puerto seguro:** 465\
+    **Nombre de usuario:** Su dirección de correo electrónico de Gellum Correo\
+    **Contraseña:** Contraseña del buzón de Gellum Correo.\
+    **Conexión:** Use SSL (recomendado).\
+    \
+    Ahora puede hacer clic en **Agregar cuenta**.\
+    ![5 Gmail Pn](/images/5-gmail.png)
+ 6. Gmail enviará un código de verificación a tu cuenta de correo electrónico para verificar la propiedad, [Revisa tu correo electrónico desde nuestro webmail](https://webmail.mymailsrvr.com/) e introduce el código. \
+    ![6 Gmail Pn](/images/6-gmail.png)
+
+    Finalmente, haz clic en "**Verificar**".
+ 7. **¡Hemos finalizado la configuración de ENVÍO\!**, ahora puede "**Establecer como predeterminado**" (opcional) para que siempre se muestre tu dirección de correo electrónico de Gellum Correo al responder desde Gmail.
+
+    <Info>
+      Aún no hemos terminado la configuración general para Gmail. Vaya al siguiente paso para poder importar los correos electrónicos.
+    </Info>
+    ![7 Gmail Pn](/images/7-gmail.png)
+
+    Ahora debemos asegurarnos que GMAIL también reciba tus correos, para esto, vamos al siguiente paso.
+ 8. Ahora, haga clic en "**Añadir una cuenta de correo electrónico**" en la sección titulada "**Consultar el correo de otras cuentas**"\
+    ![8 Gmail Pn](/images/8-gmail.png)
+ 9. Aquí agrega la **dirección de correo electrónico del buzón de Gellum Correo** y haz clic **en Siguiente**.\
+    ![9 Gmail Pn](/images/9-gmail.png)
+10. Continúe con la opción predeterminada (POP3). Haga clic **en Siguiente**.\
+    ![10 Gmail Pn](/images/10-gmail.png)
+11. Ingrese la siguiente información.\
+    \
+    **Servidor POP:** secure.emailsrvr.com\
+    **Puerto seguro:** 995\
+    **Nombre de usuario:** Su dirección de correo electrónico de Gellum Correo\
+    **Contraseña:** Contraseña del buzón de Gellum Correo.\
+    **Deja una copia en el servidor:** Marque esta opción si desea conservar una copia en nuestro servidor. Sus correos estarán disponibles tanto en Gmail como en [Webmail](https://webmail.mymailsrvr.com/). (Para más información, [consulte este artículo](https://support.google.com/mail/answer/21289)).\
+    **Utilice siempre una conexión segura (SSL):** al recuperar correos: Esta opción es importante.\
+    \
+    **Opcionales:**\
+    **Etiquetar mensajes entrantes:** Esta opción agrega una etiqueta a cada mensaje entrante de este buzón. Sirve para identificar fácilmente a quién se envió un correo si configura varios buzones en Gmail.\
+    **Archivar mensajes entrantes: **Esta opción quita los correo entrantes de la bandeja de entrada y los archiva automáticamente.\
+    ![11 Gmail Pn](/images/11-gmail.png)
+
+    ¡Felicitaciones\! Ha configurado correctamente su buzón Gellum Correo con Gmail.\
+    Puede tardar algún tiempo en que comience a recibir correos dependiendo de la cantidad de datos que tenga su buzón en nuestro servidor.
+
+### Correo iOS
+
+Para este ejemplo estamos usando la app Correo de iOS 13. Para usuarios Mac la configuración es similar, por lo que podrá usar esta misma guía.
+
+1. Acceda a **Ajustes o Configuración** y toque la opción "**Contraseñas y cuentas**". \
+   ![1 Ios Pn](/images/1-ios.png)
+2. Ahora, toque la opción "**Agregar cuenta**".\
+   ![2 Ios Pn](/images/2-ios.png)
+3. Seleccione la opción que se muestra en la parte inferior "**OTRO**".\
+   ![3 Ios Pn](/images/3-ios.png)
+4. Ahora, toque "**Agregar cuenta de correo**".\
+   ![4 Ios Pn](/images/4-ios.png)
+5. Ahora debe agregar la siguiente información:\
+   \
+   **Nombre:** el nombre que desea que se muestre en los correos, puede ser su nombre y apellido, el nombre de su empresa o su nombre y el nombre de su empresa.\
+   **Dirección de correo:** aquí ingresa el correo electrónico que desea configurar.\
+   **Contraseña:** Contraseña del buzón de Gellum Correo.\
+   **Descripción:** ¡Literalmente lo que quieras\!\
+   \
+   Una vez que complete este paso, haz clic en **Siguiente**.\
+   ![5 Ios Pn](/images/5-ios.png)
+6. Recomendamos usar la opción de protocolo "**IMAP**". \
+   La primera parte de la configuración ya debería estar completada del paso anterior, para el servidor entrante y servidor saliente vamos a ingresar exactamente la misma información.\
+   \
+   **Servidor:** secure.emailsrvr.com\
+   **Nombre de usuario:** Su dirección de correo electrónico de Gellum Correo\
+   **Contraseña:** Contraseña del buzón de Gellum Correo.\
+   \
+   Una vez que complete este paso, haz clic en **Siguiente**.\
+   ![6 Ios Pn](/images/6-ios.png)
+7. En la siguiente pantalla, asegúrese que la función "**Correo**" esté habilitada, luego toque "**Guardar**" para completar el proceso de configuración.\
+   ![7 Ios Pn](/images/7-ios.png)
+
+   ¡Felicitaciones\! La configuración en iOS ha finalizado con éxito. Para usuarios Mac la configuración es similar, por lo que podrá usar esta misma guía.
+
+<Tip>
+  Recuerda que si quieres dejar una copia en tu servidor debes usar la opción IMAP. Si tu cliente de correo sólo permite POP3 busca la opción "**Dejar copia en servidor**".
+</Tip>
+
+Esperamos que este artículo haya sido útil. Si aún necesitas ayuda puedes [contactarnos](https://gellum.com/contacto) en cualquier momento.

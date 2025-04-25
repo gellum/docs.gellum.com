@@ -28,6 +28,7 @@
               "email/migracion-de-correo",
               "email/webmail",
               "email/configurar-servidor",
+              "email/reenvio",
               "email/limites-de-envio"
             ]
           }

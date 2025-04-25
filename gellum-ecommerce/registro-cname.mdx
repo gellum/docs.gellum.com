@@ -3,13 +3,17 @@ title: "Registro CNAME"
 description: "Esta guía te ayudará a configurar tus registros DNS para que tu dominio o subdominio apunte correctamente a tu tienda Gellum Ecommerce."
 ---
 
-## Administración de DNS para Gellum Ecommerce
+## Conecta tu dominio a tu tienda de Gellum Ecommerce
 
-## Dirigiendo Tráfico a tu Tienda
+Para dirigir el tráfico a tu tienda Gellum Ecommerce, ponemos a tu disposición un registro CNAME.
 
-Para dirigir el tráfico a tu tienda Gellum Ecommerce, una forma recomendada es utilizar un registro CNAME.
+`cn1.madeby.gellum.com`
 
-### Usando un Registro CNAME
+<Warning>
+  Si es usuario Cloudflare <u>use la opción "DNS ONLY"</u>, de lo contrario generará incompatibilidad con nuestro CNAME.
+</Warning>
+
+### Registro CNAME
 
 Un registro CNAME (Canonical Name) se utiliza para crear un alias de un nombre de dominio a otro. Esto es útil si deseas que un subdominio (como `shop.tucomercio.com`) apunte al servidor de Gellum Ecommerce.
 
@@ -54,11 +58,5 @@ Si estás utilizando Cloudflare para gestionar tus DNS, sigue estos pasos:
 ## Propagación de DNS
 
 Después de realizar cualquier cambio en tus registros DNS, es importante recordar que la propagación puede tardar algún tiempo (generalmente entre unos minutos y 48 horas). Durante este período, es posible que tu sitio web no sea accesible de manera consistente desde todas las ubicaciones. Puedes utilizar herramientas en línea como [DNS Checker](https://dnschecker.org/) para verificar el estado de la propagación de tus registros DNS.
-
-<Warning>
-  **IMPORTANTE:** Si su proveedor de host no permite la configuración de un CNAME para su dominio raiz o presenta conflicto con su proveedor de correo electrónico y registros MX use el IP de nuestro servidor.\
-  \
-  `45.55.169.242`
-</Warning>
 
 ¡Esperamos que esta guía te ayude a configurar tus registros DNS para tu tienda Gellum Ecommerce\! Si tienes alguna pregunta específica sobre la configuración de DNS requerida por Gellum Ecommerce, [consulta con soporte](https://gellum.com/contacto) de Gellum.

@@ -3,7 +3,7 @@ title: "Buscar host DNS"
 description: "Aprenda a encontrar su host DNS"
 ---
 
-Esta documentación te guiará a través del proceso de utilizar **Whois** para descubrir el host DNS de un dominio, proporcionándote los pasos claros y sencillos para que puedas realizar esta búsqueda de manera efectiva. ¡Acompáñanos en este viaje para desvelar los secretos detrás de los nombres de dominio.
+Esta documentación te guiará a través del proceso de utilizar [**Whois**](https://gellum.com/dominios/whois) para descubrir el host DNS de un dominio, proporcionándote los pasos claros y sencillos para que puedas realizar esta búsqueda de manera efectiva. 
 
 En la mayoría de los casos puedes utilizar herramientas de línea de comandos si tienes conocimientos técnicos más avanzados (como el comando whois en sistemas Linux o macOS)
 
@@ -23,7 +23,7 @@ o, una alternativa similar:
 whois google.com | grep "Nserver"
 ```
 
-## Consultar Whois con herramienta WEB
+## Herramienta Whois de Gellum
 
 A pesar de que existen numerosas herramientas Whois disponibles en línea, Gellum pone a tu disposición una herramienta Whois gratuita y fácil de usar.
 
@@ -36,7 +36,7 @@ A pesar de que existen numerosas herramientas Whois disponibles en línea, Gellu
   <Step title="Buscar dominio">
     Ingresa el nombre de dominio para conocer todos los detalles, y no menos importante, sus servidores de nombre (NS) que controlan los DNS.
 
-    Escribe el dominio sin caracteres especiales (a excepción de "-" si lo incluye) y no agregues http:// o https://.
+    Escribe el dominio sin caracteres especiales (a excepción de "-" si el dominio lo tiene) y no incluya `http://` o `https://`.
 
     <Info>
       Esta función solo está disponible para el dominio principal (p.ej.: gellum.com) y no para los subdominios (p.ej.: docs.gellum.com)
@@ -58,7 +58,7 @@ A pesar de que existen numerosas herramientas Whois disponibles en línea, Gellu
   </Step>
 </Steps>
 
-Esperamos que esta explicación y [herramienta whois](https://gellum.com/dominios/whois) sea de ayuda para que puedas verificar el host DNS de un dominio. 
+Esperamos que esta explicación y [herramienta whois](https://gellum.com/dominios/whois) sea de ayuda para que puedas verificar el host DNS de un dominio.
 
 <Tip>
   Sabiendo el host DNS podrás modificar tus registros DNS para [configurar los registros MX de Gellum Mailbox](/email/registros).

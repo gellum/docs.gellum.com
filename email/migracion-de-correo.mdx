@@ -1,0 +1,68 @@
+---
+title: "Migración de autoservicio"
+description: "Utilice la herramienta de autoservicio proporcionada por Rackspace"
+---
+
+<Warning>
+  **IMPORTANTE:** No cancele su servicio de servidor de correo de origen hasta que haya confirmado que todos los usuarios tienen sus datos de correo electrónico en nuestro servidor.
+
+  - Recopile todas las direcciones de correo electrónico y sus contraseñas del servidor de origen y el servidor Gellum Mailbox.
+  - Asegúrese de poder [actualizar los registros DNS de su correo electrónico](/email/registros) en su host DNS actual. Si no sabge dónde actualizarlos, consulte "[Buscar host DNS](/email/buscar-host-dns)".
+  - Puede revisar la lista de mensajes migrados durante una migración vía [webmail](/email/webmail).
+  - Asegúrese de que el tamaño de su buzón de origen no exceda el 70% de la capacidad de su buzón actual. Gellum Mailbox ofrece buzón de 25GB por cada correo.
+  - Después de la migración, deberá volver a [configurar todos los clientes de correo electrónico y dispositivos móviles](/email/configurar-servidor).
+</Warning>
+
+Sabemos que el cambio hacia un nuevo proveedor de correos electrónicos no siempre es un proceso sencillo, y lo que más preocupa a los usuarios es perder todo su historial de mensajes.
+
+Esta documentación le explica el paso a paso para hacer la migración de correos electrónicos hacia nuestro servicio Gellum Mailbox.
+
+<Note>
+  También puede [solicitar asistencia](https://gellum.com/contacto) para que un técnico de Gellum gestione la migración de todos los correos electrónicos. Migración de hasta 5 cuentas de correo sin costo adicional. Para la migración de más cuentas de correo deberá solicitar un presupuesto.
+</Note>
+
+## Pre-Requisitos
+
+- **Aplica para:** Administrador o Depto. IT.
+- **Dificultad:** Moderada.
+- **Tiempo necesario:** varias horas (depende de la cantidad de datos y cantidad de cuentas de correo).
+- **Herramientas necesarias:** https://rackspace.selfmigration.com/.
+- **Buzón de correo:** Debe contar con al menos un buzón de correo Gellum Mailbox.
+
+<Info>
+  Esta es una herramienta de migración basada en [MigrationWiz](https://www.bittitan.com/migrationwiz/why-migrationwiz/) y no todas las funciones están disponibles en el autoservicio. Si desea usar la versión completa debe contratar [MigrationWiz](https://www.bittitan.com/migrationwiz/why-migrationwiz/).
+</Info>
+
+## Migre su correo electrónico
+
+1. Inicie sesión en el panel de control de la herramienta: https://rackspace.selfmigration.com/\
+   En el cuadro de "**Dirección de correo electrónico**", introduzca una dirección de correo electrónico de contacto que no se migrará. Es recomendable que no se use una dirección de correo electrónico del dominio que estará migrando.\
+   \
+   Haga clic en "**login**"\
+   ![1 Migracion Pn](/images/1-migracion.png)
+
+   Una notificación le informará que se ha enviado un correo electrónico con un enlace seguro. Siga las instrucciones del mensaje en su correo electrónico para inciar sesión.
+2. Encuentre la dirección del servidor de su servicio actual de correo electrónico.\
+   Si no las encuentra puede contactar con soporte técnico de su proveedor actual.
+3. Una vez que tenga la información de su servidor de origen:\
+   - Seleccione el tipo de sistema del servidor de origen: Introduzca la dirección del servidor. Para IMAP, también debe introducir un número de puerto. Normalmente los puertos IMAP son 993 (SSL) y 143 (sin SSL).\
+   - Para el servidor de destino, seleccione Rackspace Email.\
+   - Haga Clic en **Siguiente**.\
+   ![3 Migracion Pn](/images/3-migracion.png)
+4. Introduzca las direcciones de correo electrónico, los nombres de usuario y las contraseñas de los buzones de origen (su servicio actual) y destino (su nuevo correo con Gellum).\
+   Puede migrar varios buzones haciendo clic en el ´simbolo \+ o introduciendo la información de su buzón en la hoja de cálculo. \
+   \
+   Haga clic en **Siguiente**.\
+   ![4 Migracion Pn](/images/4-migracion.png)
+5. En este paso la herramienta iniciará una migración de prueba, es solo un proceso para garantizar que la conectividad es exitosa para ambos buzones. (origen y destino).
+6. Cuanto esté "**Listo para migrar**", haga clic en **Siguiente**.
+
+   <Warning>
+     Nota: si el estado muestra "Error", haga clic en el botón rojo "Más información" y posteriormente seleccione "Resolver problema" para obtener instrucciones.
+   </Warning>
+7. Una vez que se complete la migración, puede a volver a ejecutar la herramienta de migración haciendo clic en "**migrar nuevos elementos**".\
+   ![7 Migracion Pn](/images/7-migracion.png)
+
+¡Ya ha migrado sus mensajes del correo electrónico a nuestro servicio\!.
+
+Puede crea tantas migraciones que desee sin límite.

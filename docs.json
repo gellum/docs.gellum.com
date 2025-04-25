@@ -25,6 +25,7 @@
             "pages": [
               "email/registros",
               "email/buscar-host-dns",
+              "email/migracion-de-correo",
               "email/webmail",
               "email/configurar-servidor",
               "email/limites-de-envio"

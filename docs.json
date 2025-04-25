@@ -24,6 +24,7 @@
             "group": "Correo Electrónico",
             "pages": [
               "email/registros",
+              "email/buscar-host-dns",
               "email/webmail",
               "email/configurar-servidor",
               "email/limites-de-envio"

@@ -34,7 +34,8 @@
           {
             "group": "Dominios",
             "pages": [
-              "dominios/buscar-host-dns"
+              "dominios/buscar-host-dns",
+              "dominios/cloudflare-dns-host"
             ]
           }
         ]

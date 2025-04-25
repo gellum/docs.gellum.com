@@ -1,0 +1,57 @@
+---
+title: "Cloudflare DNS"
+description: "Esta guía te mostrará los pasos básicos para configurar y utilizar Cloudflare como tu servidor DNS para tu dominio. Cloudflare ofrece una infraestructura DNS global rápida y segura, además de otras funcionalidades como mitigación de DDoS y CDN."
+---
+
+## Paso 1: Crear una Cuenta de Cloudflare
+
+1. Ve al sitio web de [Cloudflare](https://www.cloudflare.com/).
+2. Haz clic en el botón "Sign Up" o "Registrarse".
+3. Introduce tu dirección de correo electrónico y crea una contraseña segura.
+4. Sigue las instrucciones en pantalla para completar el proceso de registro.
+
+## Paso 2: Añadir tu Sitio Web
+
+1. Una vez que hayas iniciado sesión, serás dirigido a tu panel de control.
+2. Haz clic en el botón "\+ Add a Site" o "Añadir un Sitio".
+3. Introduce el nombre de dominio que deseas configurar (por ejemplo, `tudominio.com`).
+4. Haz clic en "Add Site" o "Añadir Sitio".
+
+## Paso 3: Revisar tus Registros DNS Existentes
+
+1. Cloudflare escaneará los registros DNS existentes de tu dominio.
+2. Revisa cuidadosamente la lista de registros mostrada. Asegúrate de que todos los registros importantes (como tus registros A, CNAME, MX, TXT, etc.) estén presentes y sean correctos.
+3. Puedes editar o añadir nuevos registros según sea necesario.
+
+## Paso 4: Cambiar tus Servidores de Nombres (Nameservers)
+
+1. Cloudflare te proporcionará un par de servidores de nombres específicos para tu dominio (por ejemplo, `nombre1.ns.cloudflare.com` y `nombre2.ns.cloudflare.com`).
+2. **Importante:** Debes actualizar los servidores de nombres de tu dominio en el panel de control de tu registrador de dominio (donde compraste tu dominio).
+3. Inicia sesión en la cuenta de tu registrador de dominio.
+4. Busca la sección de configuración de DNS o servidores de nombres para tu dominio.
+5. Reemplaza los servidores de nombres existentes con los proporcionados por Cloudflare.
+6. Guarda los cambios.
+
+## Paso 5: Verificar la Propagación del DNS
+
+1. La propagación de los cambios de DNS puede tardar algún tiempo (generalmente entre unos minutos y 48 horas).
+2. Puedes utilizar herramientas en línea como [DNS Checker](https://dnschecker.org/) para verificar si los nuevos servidores de nombres de Cloudflare se están resolviendo correctamente en diferentes ubicaciones del mundo.
+
+## Paso 6: Explorar las Funcionalidades de Cloudflare
+
+Una vez que tu dominio esté utilizando los servidores DNS de Cloudflare, puedes aprovechar otras funcionalidades que ofrece, como:
+
+- **CDN (Content Delivery Network):** Acelera la entrega de tu sitio web almacenando en caché el contenido en servidores distribuidos globalmente.
+- **Seguridad:** Protección contra ataques DDoS, firewall de aplicaciones web (WAF) y más.
+- **SSL/TLS Gratis:** Encripta el tráfico entre tus visitantes y tu servidor.
+- **Reglas de Página:** Personaliza el comportamiento de Cloudflare para URLs específicas.
+- **Workers:** Ejecuta código JavaScript en la red de Cloudflare.
+
+## Consejos y Consideraciones
+
+- Asegúrate de hacer una copia de seguridad de tus registros DNS actuales antes de realizar cualquier cambio.
+- Ten paciencia durante el proceso de propagación del DNS.
+- Familiarízate con el panel de control de Cloudflare para configurar y gestionar las diversas opciones disponibles.
+- Consulta la [documentación oficial de Cloudflare](https://developers.cloudflare.com/) para obtener información más detallada y avanzada.
+
+¡Felicidades\! Has configurado correctamente Cloudflare como tu servidor DNS. Disfruta de los beneficios de su velocidad y seguridad.

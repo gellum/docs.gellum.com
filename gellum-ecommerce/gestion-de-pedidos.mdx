@@ -1,0 +1,86 @@
+---
+title: "Gestión de pedidos"
+description: "DeEsta guía te mostrará los pasos básicos para gestionar los pedidos de tus clientes en tu tienda Gellum Ecommerce, impulsada por WooCommerce.scription of your new file."
+---
+
+## Accediendo a la Sección de Pedidos
+
+1. Inicia sesión en el panel de administración de tu sitio web Gellum Ecommerce (generalmente en `tudominio.com/wp-admin`).
+2. En el menú lateral izquierdo, localiza la opción **WooCommerce**.
+3. Haz clic en **WooCommerce** y luego selecciona **Pedidos** en el submenú. Serás dirigido a la página de gestión de pedidos.
+
+## Visualización de Pedidos
+
+La página de **Pedidos** muestra una lista de todos los pedidos realizados en tu tienda. Para cada pedido, verás la siguiente información:
+
+- **Número de Pedido:** Un identificador único para cada pedido (haz clic en él para ver los detalles del pedido).
+- **Nombre del Cliente:** El nombre de la persona que realizó el pedido.
+- **Fecha:** La fecha y hora en que se realizó el pedido.
+- **Estado:** El estado actual del pedido (por ejemplo, "Pendiente de pago", "Procesando", "Completado", "Cancelado", etc.).
+- **Total:** El importe total del pedido.
+- **Acciones:** Iconos que te permiten realizar acciones rápidas en el pedido (por ejemplo, ver, editar, marcar como completado).
+
+## Estados de los Pedidos
+
+WooCommerce utiliza varios estados para indicar el progreso de un pedido:
+
+- **Pendiente de pago:** El cliente realizó el pedido pero aún no ha pagado.
+- **Procesando:** El pago se ha recibido (para métodos de pago que no son contra reembolso) y estás preparando el pedido para el envío.
+- **En espera:** El pedido está en espera, generalmente debido a la falta de stock o a una verificación manual necesaria.
+- **Completado:** El pedido ha sido enviado y entregado al cliente.
+- **Cancelado:** El pedido ha sido cancelado por el cliente o por ti.
+- **Reembolsado:** Se ha emitido un reembolso para el pedido.
+- **Fallido:** El pago falló o fue rechazado.
+- **Borrador:** Un pedido que se está creando en el panel de administración pero aún no se ha completado.
+
+## Gestión de un Pedido Individual
+
+Para ver los detalles completos y gestionar un pedido específico, haz clic en el **Número de Pedido** o en el icono de **Ver** asociado al pedido en la lista. Serás llevado a la página de detalles del pedido.
+
+En la página de detalles del pedido, encontrarás la siguiente información:
+
+- **Información del Pedido:** Número de pedido, fecha, hora, dirección IP del cliente.
+- **Detalles de Facturación:** Nombre, apellidos, dirección de facturación, correo electrónico, teléfono.
+- **Detalles de Envío:** Nombre, apellidos, dirección de envío (si es diferente a la facturación).
+- **Artículos del Pedido:** La lista de productos incluidos en el pedido, cantidad, precio y subtotal.
+- **Metadatos del Pedido:** Información adicional sobre el pedido (por ejemplo, método de pago, método de envío).
+- **Notas del Pedido:** Un registro de las notas relacionadas con el pedido (visibles para ti o para el cliente).
+- **Acciones del Pedido:** Un menú desplegable para cambiar el estado del pedido y botones para otras acciones.
+
+## Acciones Comunes para Gestionar un Pedido
+
+1. **Actualizar el Estado del Pedido:**
+   - Utiliza el menú desplegable **Acciones del pedido** (ubicado en la esquina superior derecha) para seleccionar un nuevo estado para el pedido (por ejemplo, "Procesando", "Completado").
+   - Haz clic en el botón **Actualizar** para aplicar el cambio de estado.
+   - **Nota:** Al cambiar el estado a "Completado", WooCommerce puede enviar automáticamente un correo electrónico de notificación de envío al cliente (si está configurado).
+2. **Añadir Notas al Pedido:**
+   - En la caja **Notas del pedido**, puedes añadir notas internas para tu referencia o notas para el cliente (marca la casilla "Añadir nota al cliente").
+   - Haz clic en el botón **Añadir nota** para guardar la nota. Las notas al cliente se enviarán por correo electrónico si está configurado.
+3. **Editar los Detalles del Pedido (con precaución):**
+   - En la sección **Artículos del pedido**, puedes editar la cantidad de los productos.
+   - En las secciones **Detalles de facturación** y **Detalles de envío**, puedes modificar la información del cliente (por ejemplo, si cometió un error en la dirección).
+   - Haz clic en el botón **Actualizar** después de realizar cualquier edición. **Ten cuidado al editar los pedidos, ya que esto puede afectar los cálculos y los registros.**
+4. **Reembolsar un Pedido:**
+   - Si necesitas reembolsar un pedido, localiza la sección **Artículos del pedido**.
+   - Haz clic en el botón **Reembolsar** (si tu pasarela de pago lo admite) o procesa el reembolso manualmente a través de tu pasarela de pago y luego registra el reembolso en WooCommerce.
+   - Sigue las instrucciones en pantalla para especificar los artículos a reembolsar y el importe.
+   - Puedes añadir una nota de reembolso para el cliente.
+5. **Imprimir Facturas y Etiquetas de Envío (puede requerir plugins):**
+   - WooCommerce no incluye una funcionalidad de impresión de facturas y etiquetas de envío por defecto.
+   - Puedes utilizar plugins de WooCommerce específicos para generar e imprimir facturas, albaranes y etiquetas de envío directamente desde la página de detalles del pedido.
+
+## Acciones Masivas
+
+Desde la página principal de **Pedidos**, puedes realizar acciones masivas en varios pedidos a la vez:
+
+1. Selecciona los pedidos en los que deseas realizar la acción marcando las casillas junto a sus números de pedido.
+2. En el menú desplegable **Acciones en lote**, selecciona la acción que deseas realizar (por ejemplo, "Cambiar a procesando", "Cambiar a completado", "Mover a la papelera").
+3. Haz clic en el botón **Aplicar**.
+
+## Consejos Adicionales
+
+- Mantén tus pedidos actualizados con los estados correctos para informar a tus clientes sobre el progreso de sus compras.
+- Utiliza las notas del pedido para mantener un registro de las comunicaciones y cualquier acción tomada en relación con un pedido.
+- Configura las notificaciones por correo electrónico de WooCommerce para que tú y tus clientes reciban actualizaciones automáticas sobre los pedidos.
+
+¡Esperamos que esta guía te ayude a gestionar los pedidos de manera eficiente en tu tienda Gellum Ecommerce\! Consulta la [documentación oficial de WooCommerce](https://woocommerce.com/documentation/) para obtener información más detallada.

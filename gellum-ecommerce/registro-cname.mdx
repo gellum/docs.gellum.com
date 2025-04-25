@@ -1,0 +1,58 @@
+---
+title: "Registro CNAME"
+description: "Esta guía te ayudará a configurar tus registros DNS para que tu dominio o subdominio apunte correctamente a tu tienda Gellum Ecommerce."
+---
+
+## Administración de DNS para Gellum Ecommerce
+
+## Dirigiendo Tráfico a tu Tienda
+
+Para dirigir el tráfico a tu tienda Gellum Ecommerce, una forma recomendada es utilizar un registro CNAME.
+
+### Usando un Registro CNAME
+
+Un registro CNAME (Canonical Name) se utiliza para crear un alias de un nombre de dominio a otro. Esto es útil si deseas que un subdominio (como `shop.tucomercio.com`) apunte al mismo lugar que tu dominio principal de Gellum Ecommerce.
+
+**Para crear un registro CNAME:**
+
+1. Accede al panel de control de tu proveedor de DNS (donde gestionas los registros DNS de tu dominio). Esto podría ser el panel de control de tu registrador de dominio o una plataforma como Cloudflare.
+2. Busca la sección de gestión de DNS o configuración de registros DNS.
+3. Crea un nuevo registro con los siguientes detalles:
+   - **Tipo:** Selecciona `CNAME`.
+   - **Nombre/Host:** Introduce el dominio (puede dejar en blanco usar @) o subdominio que deseas utilizar (por ejemplo, `shop.tucomercio.com`).
+   - **Valor/Apunta a:** Introduce la siguiente dirección:
+
+     ```
+     cn1.madeby.gellum.com
+     ```
+
+### Importante sobre el Certificado SSL:
+
+Al agregar un registro CNAME para tu dominio o subdominio y dirigirlo correctamente a tu tienda Gellum Ecommerce, **se emitirá automáticamente un certificado SSL para este subdominio**. Esto asegura que la conexión entre los visitantes y tu tienda a través de `cn1.madeby.gellum.com` sea segura y encriptada (HTTPS).
+
+## Gestión de DNS con Cloudflare
+
+Si estás utilizando Cloudflare para gestionar tus DNS, sigue estos pasos:
+
+1. Inicia sesión en tu cuenta de Cloudflare.
+2. Selecciona el dominio que deseas configurar.
+3. Haz clic en la pestaña **DNS**.
+4. Para **agregar un nuevo registro CNAME:**
+   - Haz clic en el botón **\+ Add record**.
+   - En el menú desplegable **Type**, selecciona `CNAME`.
+   - En el campo **Name**, introduce el subdominio: `cn1.madeby.gellum.com`.
+   - En el campo **Target**, introduce `cn1.madeby.gellum.com`.
+   - Asegúrate de que el **Proxy status** esté configurado como "DNS only" (gris) si solo deseas la funcionalidad de DNS de Cloudflare para este registro.
+   - Haz clic en **Save**.
+
+<Warning>
+  **IMPORTANTE:** Activar el proxy puede causar errores de conexión debido a posibles conflictos internos de Cloudflare. Para un funcionamiento óptimo, mantén el estado del proxy en "DNS only" para el registro CNAME `cn1.madeby.gellum.com`.
+</Warning>
+
+[******Para más detalles sobre la gestión de DNS en Cloudflare, consulta nuestra documentación.******](/dominios/cloudflare-dns-host)
+
+## Propagación de DNS
+
+Después de realizar cualquier cambio en tus registros DNS, es importante recordar que la propagación puede tardar algún tiempo (generalmente entre unos minutos y 48 horas). Durante este período, es posible que tu sitio web no sea accesible de manera consistente desde todas las ubicaciones. Puedes utilizar herramientas en línea como [DNS Checker](https://dnschecker.org/) para verificar el estado de la propagación de tus registros DNS.
+
+¡Esperamos que esta guía te ayude a configurar tus registros DNS para tu tienda Gellum Ecommerce\! Si tienes alguna pregunta específica sobre la configuración de DNS requerida por Gellum Ecommerce, [consulta con soporte](https://gellum.com/contacto) de Gellum.

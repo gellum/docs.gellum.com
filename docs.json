@@ -37,6 +37,14 @@
               "dominios/buscar-host-dns",
               "dominios/cloudflare-dns-host"
             ]
+          },
+          {
+            "group": "Gellum Ecommerce",
+            "pages": [
+              "gellum-ecommerce/gestion-de-productos",
+              "gellum-ecommerce/gestion-de-pedidos",
+              "gellum-ecommerce/registro-cname"
+            ]
           }
         ]
       }

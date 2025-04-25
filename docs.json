@@ -41,9 +41,9 @@
           {
             "group": "Gellum Ecommerce",
             "pages": [
-              "gellum-ecommerce/gestion-de-productos",
+              "gellum-ecommerce/registro-cname",
               "gellum-ecommerce/gestion-de-pedidos",
-              "gellum-ecommerce/registro-cname"
+              "gellum-ecommerce/gestion-de-productos"
             ]
           }
         ]

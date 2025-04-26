@@ -1,90 +1,90 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
-  "name": "Documentación de Gellum",
-  "colors": {
-    "primary": "#006AFF",
-    "light": "#067eff",
-    "dark": "#0851c5"
-  },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Docs",
-        "groups": [
-          {
-            "group": "Inicio",
-            "pages": [
-              "introduccion",
-              "como-comprar"
+    "$schema": "https://mintlify.com/docs.json",
+    "theme": "willow",
+    "name": "Documentación de Gellum",
+    "colors": {
+        "primary": "#006AFF",
+        "light": "#067eff",
+        "dark": "#0851c5"
+    },
+    "favicon": "/favicon.svg",
+    "navigation": {
+        "tabs": [
+            {
+                "tab": "Docs",
+                "groups": [
+                    {
+                        "group": "Inicio",
+                        "pages": [
+                            "introduccion",
+                            "como-comprar"
+                        ]
+                    },
+                    {
+                        "group": "Correo Electrónico",
+                        "pages": [
+                            "email/registros",
+                            "email/migracion-de-correo",
+                            "email/webmail",
+                            "email/configurar-servidor",
+                            "email/reenvio",
+                            "email/limites-de-envio"
+                        ]
+                    },
+                    {
+                        "group": "Dominios",
+                        "pages": [
+                            "dominios/buscar-host-dns",
+                            "dominios/cloudflare-dns-host"
+                        ]
+                    },
+                    {
+                        "group": "Gellum Ecommerce",
+                        "pages": [
+                            "gellum-ecommerce/registro-cname",
+                            "gellum-ecommerce/gestion-de-pedidos",
+                            "gellum-ecommerce/gestion-de-productos"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "global": {
+            "anchors": [
+                {
+                    "anchor": "Planes",
+                    "href": "https://gellum.com/planes",
+                    "icon": "dollar-sign"
+                },
+                {
+                    "anchor": "Blog",
+                    "href": "https://gellum.com/blog",
+                    "icon": "newspaper"
+                }
             ]
-          },
-          {
-            "group": "Correo Electrónico",
-            "pages": [
-              "email/registros",
-              "email/migracion-de-correo",
-              "email/webmail",
-              "email/configurar-servidor",
-              "email/reenvio",
-              "email/limites-de-envio"
-            ]
-          },
-          {
-            "group": "Dominios",
-            "pages": [
-              "dominios/buscar-host-dns",
-              "dominios/cloudflare-dns-host"
-            ]
-          },
-          {
-            "group": "Gellum Ecommerce",
-            "pages": [
-              "gellum-ecommerce/registro-cname",
-              "gellum-ecommerce/gestion-de-pedidos",
-              "gellum-ecommerce/gestion-de-productos"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Planes",
-          "href": "https://gellum.com/planes",
-          "icon": "dollar-sign"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://gellum.com/blog",
-          "icon": "newspaper"
         }
-      ]
+    },
+    "logo": {
+        "light": "/logo/light.svg",
+        "dark": "/logo/dark.svg"
+    },
+    "navbar": {
+        "links": [
+            {
+                "label": "Contacto",
+                "href": "https://gellum.com/contacto"
+            }
+        ],
+        "primary": {
+            "type": "button",
+            "label": "Mi cuenta",
+            "href": "https://gellum.com/mi-cuenta"
+        }
+    },
+    "footer": {
+        "socials": {
+            "website": "https://gellum.com/blog",
+            "x-twitter": "https://x.com/gellum_com"
+        }
     }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Contacto",
-        "href": "https://gellum.com/contacto"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Mi cuenta",
-      "href": "https://gellum.com/mi-cuenta"
-    }
-  },
-  "footer": {
-    "socials": {
-      "website": "https://gellum.com/blog",
-      "x-twitter": "https://x.com/gellum_com"
-    }
-  }
 }

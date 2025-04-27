@@ -3,20 +3,22 @@ title: "Estado del sistema"
 description: "Esta guía le da un ejemplo de cómo entender y usar nuestra página de estado del sistema"
 ---
 
+import Ayuda from '/snippets/ayuda.mdx';
+
 Gellum ha puesto a tu disposición una página de estado de sistema que te permitirá saber el estado actual de todos los servicios.
 
 Página de Estado del sistema: https://status.gellum.com/
 
 ## Funciones principales
 
-<CardGroup cols={3}>
-  <Card title="Estado de los sistemas">
+<CardGroup cols="3">
+  <Card title="Estado de los sistemas" href="#estado-de-los-sistemas">
     - Identifique fácilmente qué servicio se encuentra activo o con problemas.
   </Card>
-  <Card title="Historial">
+  <Card title="Historial" href="#historial">
     - Conozca la historial completa de nuestros servicios e identifique fácilmente las notas del departamento TI.
   </Card>
-  <Card title="Notificaciones">
+  <Card title="Notificaciones" href="#notificaciones">
     - Si es usuario de Gellum, podrá **suscribirse** para recibir notificaciones de todo el sistema o sobre productos específicos.
   </Card>
 </CardGroup>
@@ -37,7 +39,7 @@ Usaremos para este ejemplo, Gellum Mailbox, pero puede repetir estos para conoce
 
     ![1 Status Pn](/images/1-status.png)
 
-    _Si el sistema de interés no tiene componentes, _**_vaya al paso 3_**.
+    \_Si el sistema de interés no tiene componentes, \_**_vaya al paso 3_**.
   </Step>
   <Step title="Amplie los detalles del sistema">
     Toque el símbolo `<Icon icon="angle-down" color="#4b4b4b" />` para conocer todos los componentes que se requieren para que un sistema determinado funcione.
@@ -49,9 +51,9 @@ Usaremos para este ejemplo, Gellum Mailbox, pero puede repetir estos para conoce
   <Step title="Compruebe el estado del Sistema">
     Cada sistema está marcado por uno de los 3 siguientes estados:
 
-     <Icon icon="circle-check" color="#00921d" /> **Operando:** El sistema se encuentra 100% funcional.\
-     <Icon icon="triangle-exclamation" color="#f1b000" /> **Degradación Parcial:** El sistema se encuentra funcionando con problemas.\
-     <Icon icon="triangle-exclamation" color="#ff0000" /> **Degradación Total:** El sistema no está funcionando.
+    <Icon icon="circle-check" color="#00921d" /> **Operando:** El sistema se encuentra 100% funcional.\
+    <Icon icon="triangle-exclamation" color="#f1b000" /> **Degradación Parcial:** El sistema se encuentra funcionando con problemas.\
+    <Icon icon="triangle-exclamation" color="#ff0000" /> **Degradación Total:** El sistema no está funcionando.
 
     Además, algunos Sistemas o componentes podrían incluir un "tooltip <Icon icon="circle-info" color="#515151" /> " que le dará más información sobre cuál servicio está consultando.
 
@@ -61,7 +63,7 @@ Usaremos para este ejemplo, Gellum Mailbox, pero puede repetir estos para conoce
 
 ### Historial
 
-Registramos cada incidencia que ha ocurrido en nuestros sistemas o sistemas fundamentales de nuestros socios. 
+Registramos cada incidencia que ha ocurrido en nuestros sistemas o sistemas fundamentales de nuestros socios.
 
 Puede ver en el historial ingresando en el botón del pié de página de la página de **estado del sistema** o ir directamente al siguiente link: https://status.gellum.com/history
 
@@ -75,7 +77,7 @@ Si elije una de las notas podrá ampliar más detalles y conocer el historial co
 
 ### Notificaciones
 
-Reciba informes automáticamente en su buzón de correo electrónico, vía RSS o en su canal de Slack preferido. 
+Reciba informes automáticamente en su buzón de correo electrónico, vía RSS o en su canal de Slack preferido.
 
 Esta función le permitirá estar fuera de nuestra página de estado del sistema y recibir notificaciones por fallos encontrados y soluciones creadas.
 
@@ -124,3 +126,5 @@ Esta función le permitirá estar fuera de nuestra página de estado del sistema
 </Steps>
 
 En Gellum, sabemos que tu tranquilidad y confianza son nuestra prioridad. Por eso, hemos creado esta página de estado: para mantenerte informado en tiempo real sobre el rendimiento de nuestros servicios. Queremos agradecerte por confiar en nosotros y por permitirnos ser parte de tu día a día. Tu satisfacción es nuestro mayor impulso para seguir mejorando y ofreciéndote la mejor experiencia posible.
+
+<Ayuda />

@@ -48,6 +48,17 @@
                         ]
                     }
                 ]
+            },
+                      {
+                "tab": "Plugins",
+                "groups": [
+                    {
+                        "group": "Gellum Business Hours",
+                        "pages": [
+                            "plugins/gellum-business-hours/basic"
+                        ]
+                    }
+                ]
             }
         ],
         "global": {

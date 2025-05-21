@@ -1,0 +1,214 @@
+---
+title: "Gellum Business Hours Documentation  Overview"
+description: "Description of your new file."
+---
+
+## Overview
+
+Gellum Business Hours is a WooCommerce plugin that allows store owners to define their operating hours and manage their store's availability. This plugin helps you control when customers can place orders by:
+
+- Setting specific business hours for each day of the week
+- Disabling checkout functionality when the store is closed
+- Displaying informative notices to customers about store status
+- Providing a shortcode to show store status on any page
+
+## Installation
+
+1. Upload the `gellum-business-hours` folder to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Navigate to **WooCommerce \> Business Hours** in your WordPress admin panel
+4. Configure your store's operating hours for each day of the week
+5. Save your settings
+
+## Configuration
+
+### Setting Up Business Hours
+
+1. Go to **WooCommerce \> Business Hours** in your admin dashboard
+2. For each day of the week, you can:
+   - Set the status to **Open** or **Closed**
+   - Define opening time (in 15-minute intervals)
+   - Define closing time (in 15-minute intervals)
+3. Click **Save changes** to apply your settings
+
+### Overnight Hours
+
+The plugin supports overnight business hours. If your store closes after midnight:
+
+1. Set the opening time for the first day (e.g., Monday 22:00)
+2. Set the closing time for the first day that is earlier than the opening time (e.g., 02:00)
+3. The plugin will automatically recognize this as an overnight schedule
+
+## Features
+
+### Store Status Control
+
+When the store is outside of business hours:
+
+- The checkout functionality is disabled
+- "Proceed to Checkout" buttons are hidden
+- Informative notices are displayed on cart and checkout pages
+- Customers are informed when the store will reopen
+
+### Shortcode Usage
+
+You can display the current store status anywhere on your site using the `[gellum_business_hours]` shortcode.
+
+> **Note:** Prior to version 1.3.4, the shortcode was `[gellum_store_status]`. If you're upgrading from a previous version, you'll need to update any instances of the old shortcode.
+
+#### Example Output:
+
+- When open: `<span class="gellum-business-hours-status gellum-business-hours-open">Open</span>`
+- When closing soon: `<span class="gellum-business-hours-status gellum-business-hours-open">Closing in 30 minutes</span>`
+- When closed: `<span class="gellum-business-hours-status gellum-business-hours-closed">Closed. Next opening: Today at 9:00 am.</span>`
+
+#### Shortcode Placement Options:
+
+- In page or post content: `[gellum_business_hours]`
+- In a text widget: `[gellum_business_hours]`
+- In PHP template files: `<?php echo do_shortcode('[gellum_business_hours]'); ?>`
+
+### Default Styling
+
+The plugin comes with built-in CSS styles for the shortcode output. You can see the default styling below or override it with your own custom CSS:
+
+```
+/* Gellum Business Hours - Public Shortcode Styles [gellum_business_hours] */
+.gellum-business-hours-status {
+  /* Base class for all status indicators */
+}
+
+.gellum-business-hours-open {
+  background-color: #E6FAF0; 
+  color: #009879;
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  display: inline-block; 
+  font-size: 0.9em;
+}
+
+.gellum-business-hours-closed {
+  background-color: #F8D7DA; 
+  color: #DC3545;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 0.9em;
+}
+```
+
+## Technical Details
+
+### Requirements
+
+- WordPress 5.0 or higher
+- WooCommerce 3.0 or higher
+- PHP 7.2 or higher
+
+### Timezone Support
+
+The plugin uses the timezone configured in your WordPress settings (Settings \> General) to accurately determine if your store is open or closed.
+
+### WooCommerce Compatibility
+
+- Compatible with the latest WooCommerce versions (tested up to 8.8)
+- Full support for WooCommerce HPOS (High-Performance Order Storage)
+
+## Troubleshooting
+
+### Store Status Is Incorrect
+
+If your store status doesn't match your expectations:
+
+1. Verify your WordPress timezone setting (Settings \> General)
+2. Check that your business hours are properly configured
+3. Remember that overnight schedules require the closing time to be earlier than the opening time
+
+### Checkout Still Available When Closed
+
+If customers can still checkout when the store should be closed:
+
+1. Check if you have caching plugins enabled and clear your cache
+2. Verify there are no theme or plugin conflicts overriding the WooCommerce checkout process
+3. Ensure your business hours are correctly set in the correct timezone
+
+## FAQ
+
+**Q: Does this plugin support multiple time slots per day?**\
+A: Currently, the plugin supports one opening and closing time per day.
+
+**Q: Will orders placed right before closing time be processed?**\
+A: Yes, any orders placed before the closing time will be accepted normally.
+
+**Q: Can I customize the messages shown to customers?**\
+A: The current version uses predefined messages, but they are translated based on your WordPress language settings.
+
+**Q: Is the plugin compatible with multilingual sites?**\
+A: Yes, the plugin is translation-ready and works with WordPress multilingual plugins.
+
+## Changelog
+
+### 1.3.4 (Current - May 20, 2025)
+
+- New shortcode `[gellum_business_hours]`. The previous shortcode is no longer available.
+- CSS update, removing `!important;` for styling the shortcode output.
+
+### 1.3.3 (May 20, 2025)
+
+- Feature: Added new shortcode `[gellum_store_status]` to display the current store status.
+- Feature: Shortcode displays "Open", "Closing in XX minutes", or "Closed. Next opening: [Time/Day]".
+- Feature: Implemented new public CSS file for styling the shortcode output.
+
+### 1.3.2 (May 18, 2025)
+
+- Fix: domain path languages.
+
+### 1.3.1 (May 18, 2025)
+
+- Fix: Resolved a potential critical error from version 1.3.0.
+- Improvement: Added `if (!defined(...))` checks for constants.
+- Improvement: Simplified logic for handling overnight schedules.
+- Tweak: Added a specific CSS class `gellum-time-select` to time dropdowns.
+
+### 1.3.0
+
+- Feature: Implemented external CSS file for admin settings page.
+- Feature: Added "Readex Pro" Google Font for admin UI.
+- Improvement: Refined HTML structure with specific CSS classes.
+- Internal: Replaced inline CSS with standard enqueuing methods.
+
+### 1.2.0
+
+- Feature: Redesigned admin settings page with table layout.
+- Feature: Changed status control from checkbox to dropdown menu.
+- Improvement: Added basic inline CSS for the new layout.
+- Internal: Restructured rendering functions.
+
+### 1.1.0
+
+- Branding: Plugin name changed from "Gellum Horarios" to "Gellum Business Hours".
+- Localization: All strings translated to English.
+- Internal: Text domain and slugs updated.
+
+### 1.0.1
+
+- Compatibility: Added support for WooCommerce HPOS.
+- Fix: Improved store status logic and notifications.
+
+### 1.0.0 (Initial Release)
+
+- Feature: Core functionality to set store hours.
+- Feature: Time selection in 15-minute intervals.
+- Feature: Checkout control when store is closed.
+- Feature: Admin settings page under WooCommerce menu.
+
+## Support
+
+If you encounter any issues or have questions about the plugin, please contact us at:
+
+- Website: https://gellum.com/opensource
+- Support: https://gellum.com/opensource/support
+
+---
+
+_Gellum Business Hours_ is a product of Gellum. © 2025 Gellum. All rights reserved.

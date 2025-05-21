@@ -1,9 +1,7 @@
 ---
-title: "Gellum Business Hours Documentation  Overview"
-description: "Description of your new file."
+title: "Overview"
+description: "WooCommerce Plugin"
 ---
-
-## Overview
 
 Gellum Business Hours is a WooCommerce plugin that allows store owners to define their operating hours and manage their store's availability. This plugin helps you control when customers can place orders by:
 
@@ -11,6 +9,23 @@ Gellum Business Hours is a WooCommerce plugin that allows store owners to define
 - Disabling checkout functionality when the store is closed
 - Displaying informative notices to customers about store status
 - Providing a shortcode to show store status on any page
+
+## Features
+
+### Store Status Control
+
+When the store is outside of business hours:
+
+- The checkout functionality is disabled
+- "Proceed to Checkout" buttons are hidden
+- Informative notices are displayed on cart and checkout pages
+- Customers are informed when the store will reopen
+
+### Shortcode Usage
+
+You can display the current store status anywhere on your site using the `[gellum_business_hours]` shortcode.
+
+> **Note:** Prior to version 1.3.4, the shortcode was `[gellum_store_status]`. If you're upgrading from a previous version, you'll need to update any instances of the old shortcode.
 
 ## Installation
 
@@ -38,23 +53,6 @@ The plugin supports overnight business hours. If your store closes after midnigh
 1. Set the opening time for the first day (e.g., Monday 22:00)
 2. Set the closing time for the first day that is earlier than the opening time (e.g., 02:00)
 3. The plugin will automatically recognize this as an overnight schedule
-
-## Features
-
-### Store Status Control
-
-When the store is outside of business hours:
-
-- The checkout functionality is disabled
-- "Proceed to Checkout" buttons are hidden
-- Informative notices are displayed on cart and checkout pages
-- Customers are informed when the store will reopen
-
-### Shortcode Usage
-
-You can display the current store status anywhere on your site using the `[gellum_business_hours]` shortcode.
-
-> **Note:** Prior to version 1.3.4, the shortcode was `[gellum_store_status]`. If you're upgrading from a previous version, you'll need to update any instances of the old shortcode.
 
 #### Example Output:
 

@@ -66,7 +66,7 @@
         "global": {
             "anchors": [
                 {
-                    "anchor": "OpenSource",
+                    "anchor": "Gellum OpenSource",
                     "href": "https://gellum.com/opensource",
                     "icon": "osi"
                 }

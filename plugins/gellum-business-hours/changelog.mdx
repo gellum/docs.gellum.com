@@ -1,0 +1,58 @@
+---
+title: "Changelog"
+description: "Notes for each update."
+---
+
+### 1.3.4 (Current - May 20, 2025)
+
+- New shortcode `[gellum_business_hours]`. The previous shortcode is no longer available.
+- CSS update, removing `!important;` for styling the shortcode output.
+
+### 1.3.3 (May 20, 2025)
+
+- Feature: Added new shortcode `[gellum_store_status]` to display the current store status.
+- Feature: Shortcode displays "Open", "Closing in XX minutes", or "Closed. Next opening: [Time/Day]".
+- Feature: Implemented new public CSS file for styling the shortcode output.
+
+### 1.3.2 (May 18, 2025)
+
+- Fix: domain path languages.
+
+### 1.3.1 (May 18, 2025)
+
+- Fix: Resolved a potential critical error from version 1.3.0.
+- Improvement: Added `if (!defined(...))` checks for constants.
+- Improvement: Simplified logic for handling overnight schedules.
+- Tweak: Added a specific CSS class `gellum-time-select` to time dropdowns.
+
+### 1.3.0
+
+- Feature: Implemented external CSS file for admin settings page.
+- Feature: Added "Readex Pro" Google Font for admin UI.
+- Improvement: Refined HTML structure with specific CSS classes.
+- Internal: Replaced inline CSS with standard enqueuing methods.
+
+### 1.2.0
+
+- Feature: Redesigned admin settings page with table layout.
+- Feature: Changed status control from checkbox to dropdown menu.
+- Improvement: Added basic inline CSS for the new layout.
+- Internal: Restructured rendering functions.
+
+### 1.1.0
+
+- Branding: Plugin name changed from "Gellum Horarios" to "Gellum Business Hours".
+- Localization: All strings translated to English.
+- Internal: Text domain and slugs updated.
+
+### 1.0.1
+
+- Compatibility: Added support for WooCommerce HPOS.
+- Fix: Improved store status logic and notifications.
+
+### 1.0.0 (Initial Release)
+
+- Feature: Core functionality to set store hours.
+- Feature: Time selection in 15-minute intervals.
+- Feature: Checkout control when store is closed.
+- Feature: Admin settings page under WooCommerce menu.

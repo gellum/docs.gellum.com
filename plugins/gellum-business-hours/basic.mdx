@@ -27,33 +27,6 @@ You can display the current store status anywhere on your site using the `[gellu
 
 > **Note:** Prior to version 1.3.4, the shortcode was `[gellum_store_status]`. If you're upgrading from a previous version, you'll need to update any instances of the old shortcode.
 
-## Installation
-
-1. Upload the `gellum-business-hours` folder to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Navigate to **WooCommerce \> Business Hours** in your WordPress admin panel
-4. Configure your store's operating hours for each day of the week
-5. Save your settings
-
-## Configuration
-
-### Setting Up Business Hours
-
-1. Go to **WooCommerce \> Business Hours** in your admin dashboard
-2. For each day of the week, you can:
-   - Set the status to **Open** or **Closed**
-   - Define opening time (in 15-minute intervals)
-   - Define closing time (in 15-minute intervals)
-3. Click **Save changes** to apply your settings
-
-### Overnight Hours
-
-The plugin supports overnight business hours. If your store closes after midnight:
-
-1. Set the opening time for the first day (e.g., Monday 22:00)
-2. Set the closing time for the first day that is earlier than the opening time (e.g., 02:00)
-3. The plugin will automatically recognize this as an overnight schedule
-
 #### Example Output:
 
 - When open: `<span class="gellum-business-hours-status gellum-business-hours-open">Open</span>`

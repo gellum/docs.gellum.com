@@ -64,14 +64,9 @@
         "global": {
             "anchors": [
                 {
-                    "anchor": "Planes",
-                    "href": "https://gellum.com/planes",
-                    "icon": "dollar-sign"
-                },
-                {
-                    "anchor": "Blog",
-                    "href": "https://gellum.com/blog",
-                    "icon": "newspaper"
+                    "anchor": "OpenSource",
+                    "href": "https://gellum.com/opensource",
+                    "icon": "osi"
                 }
             ]
         }

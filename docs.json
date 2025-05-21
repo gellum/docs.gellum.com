@@ -56,7 +56,8 @@
                         "group": "Gellum Business Hours",
                         "pages": [
                             "plugins/gellum-business-hours/overview",
-                            "plugins/gellum-business-hours/installation"
+                            "plugins/gellum-business-hours/installation",
+                            "plugins/gellum-business-hours/changelog"
                         ]
                     }
                 ]

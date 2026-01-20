@@ -91,9 +91,9 @@
         }
     },
     "footer": {
-        "socials": {
-            "website": "https://gellum.com/blog",
-            "x-twitter": "https://x.com/gellum_com"
-        }
+      "socials": {
+        "website": "https://gellum.com/",
+        "x-twitter": "https://x.com/gellum_com"
+      }
     }
 }

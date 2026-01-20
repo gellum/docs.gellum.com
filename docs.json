@@ -9,69 +9,70 @@
     },
     "favicon": "/favicon.svg",
     "navigation": {
-        "tabs": [
+      "global": {
+        "anchors": [
+          {
+            "anchor": "Gellum OpenSource",
+            "icon": "osi",
+            "href": "https://gellum.com/opensource"
+          }
+        ]
+      },
+      "tabs": [
+        {
+          "tab": "Docs",
+          "groups": [
             {
-                "tab": "Docs",
-                "groups": [
-                    {
-                        "group": "Inicio",
-                        "pages": [
-                            "introduccion",
-                            "como-comprar",
-                            "estado-del-sistema"
-                        ]
-                    },
-                    {
-                        "group": "Correo Electrónico",
-                        "pages": [
-                            "email/registros",
-                            "email/migracion-de-correo",
-                            "email/webmail",
-                            "email/configurar-servidor",
-                            "email/reenvio",
-                            "email/limites-de-envio"
-                        ]
-                    },
-                    {
-                        "group": "Dominios",
-                        "pages": [
-                            "dominios/buscar-host-dns",
-                            "dominios/cloudflare-dns-host"
-                        ]
-                    },
-                    {
-                        "group": "Gellum Ecommerce",
-                        "pages": [
-                            "gellum-ecommerce/registro-cname",
-                            "gellum-ecommerce/gestion-de-pedidos",
-                            "gellum-ecommerce/gestion-de-productos"
-                        ]
-                    }
-                ]
+              "group": "Inicio",
+              "pages": [
+                "introduccion",
+                "como-comprar",
+                "estado-del-sistema"
+              ]
             },
-                      {
-                "tab": "Plugins",
-                "groups": [
-                    {
-                        "group": "Gellum Business Hours",
-                        "pages": [
-                            "plugins/gellum-business-hours/overview",
-                            "plugins/gellum-business-hours/installation",
-                            "plugins/gellum-business-hours/changelog"
-                        ]
-                    }
-                ]
+            {
+              "group": "Correo Electrónico",
+              "pages": [
+                "docs/correo-electronico/generador-de-configuracion",
+                "email/registros",
+                "email/migracion-de-correo",
+                "email/webmail",
+                "email/configurar-servidor",
+                "email/reenvio",
+                "email/limites-de-envio"
+              ]
+            },
+            {
+              "group": "Dominios",
+              "pages": [
+                "dominios/buscar-host-dns",
+                "dominios/cloudflare-dns-host"
+              ]
+            },
+            {
+              "group": "Gellum Ecommerce",
+              "pages": [
+                "gellum-ecommerce/registro-cname",
+                "gellum-ecommerce/gestion-de-pedidos",
+                "gellum-ecommerce/gestion-de-productos"
+              ]
             }
-        ],
-        "global": {
-            "anchors": [
-                {
-                    "anchor": "Gellum OpenSource",
-                    "href": "https://gellum.com/opensource",
-                    "icon": "osi"
-                }
-            ]
+          ]
+        },
+        {
+          "tab": "Plugins",
+          "groups": [
+            {
+              "group": "Gellum Business Hours",
+              "pages": [
+                "plugins/gellum-business-hours/overview",
+                "plugins/gellum-business-hours/installation",
+                "plugins/gellum-business-hours/changelog"
+              ]
+            }
+          ]
         }
+      ]
     },
     "logo": {
         "light": "/logo/light.svg",

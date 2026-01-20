@@ -1,0 +1,181 @@
+---
+title: "Generador de Configuracion"
+---
+
+<iframe width="100%" height="750px" style="border: none; background: transparent;" srcdoc={`
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configurador de Dominio Gellum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+fontFamily: {
+sans: ['Inter', 'sans-serif'],
+},
+colors: {
+accent: '#006aff',
+}
+}
+}
+}
+</script>
+<style>
+body { font-family: 'Inter', sans-serif; }
+.config-panel {
+opacity: 0;
+transform: translateX(-20px);
+transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+pointer-events: none;
+}
+.config-panel.is-visible {
+opacity: 1;
+transform: translateX(0);
+pointer-events: auto;
+}
+.custom-input:focus {
+outline: none;
+border-bottom: 2px solid #006aff;
+}
+::selection { background: #006aff; color: white; }
+.code-block {
+font-family: 'Monaco', 'Consolas', monospace;
+font-size: 0.9em;
+word-break: break-all;
+}
+</style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+<div class="w-full max-w-6xl flex flex-col md:flex-row shadow-2xl min-h-[600px]">
+<div class="w-full md:w-1/3 bg-black text-white p-8 md:p-12 flex flex-col justify-center relative z-10">
+<h2 class="text-3xl font-bold mb-2">Configuración</h2>
+<p class="text-gray-400 mb-8 text-sm leading-relaxed">
+Ingresa tu nombre de dominio para generar los registros DNS y la configuración de correo necesaria.
+</p>
+<div class="form-group">
+<label for="domainInput" class="block text-xs uppercase tracking-wider text-accent font-bold mb-2">
+Nombre de Dominio
+</label>
+<input 
+type="text" 
+id="domainInput" 
+placeholder="ejemplo.com" 
+class="custom-input w-full bg-transparent border-b border-gray-700 text-white text-xl py-2 transition-colors placeholder-gray-600 rounded-none"
+autocomplete="off"
+>
+<p class="text-xs text-gray-500 mt-2">No incluyas "www" ni "http://"</p>
+</div>
+<div class="mt-auto pt-12">
+<div class="flex items-center space-x-2 text-sm text-gray-500">
+<div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+<span>Actualización en tiempo real</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-2/3 bg-white relative overflow-hidden">
+<div id="emptyState" class="absolute inset-0 flex items-center justify-center text-gray-300 pointer-events-none">
+<span class="text-6xl opacity-20 font-bold select-none">DNS</span>
+</div>
+<div id="configPanel" class="config-panel h-full overflow-y-auto p-8 md:p-12">
+<div class="mb-8 border-b border-gray-100 pb-4">
+<h3 class="text-2xl font-bold text-gray-900">
+Configuración para <span class="text-accent domain-target">domain.tld</span>
+</h3>
+</div>
+<div class="mb-10">
+<h4 class="text-sm font-bold text-black uppercase tracking-wider mb-4 border-l-4 border-accent pl-3">DNS Config</h4>
+<div class="mb-6">
+<h5 class="font-semibold text-gray-800 mb-2 flex items-center">
+Standard DNS <span class="ml-2 text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full font-bold">Required</span>
+</h5>
+<div class="bg-gray-50 p-4 border-l-2 border-gray-200 hover:border-accent transition-colors">
+<div class="grid grid-cols-1 gap-3 code-block text-gray-600">
+<div><span class="text-black font-semibold domain-target">domain.tld</span>. MX 10 mx.<span class="domain-target">domain.tld</span>.cust.a.hostedemail.com.</div>
+<div>mail.<span class="domain-target">domain.tld</span>. CNAME mail.<span class="domain-target">domain.tld</span>.cust.a.hostedemail.com</div>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h5 class="font-semibold text-gray-800 mb-2 text-sm">Optional RFC 6186 DNS <span class="text-gray-400 font-normal">(Mail Client Autoconfiguration)</span></h5>
+<div class="bg-gray-50 p-4 border-l-2 border-gray-200">
+<div class="grid grid-cols-1 gap-2 code-block text-gray-600 text-sm">
+<div>_pop3._tcp.<span class="domain-target">domain.tld</span>. SRV 15 1 110 mail.hostedemail.com</div>
+<div>_imap._tcp.<span class="domain-target">domain.tld</span>. SRV 10 1 143 mail.hostedemail.com</div>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<h5 class="font-semibold text-gray-800 mb-2 text-sm">Recommended DNS (SPF)</h5>
+<div class="bg-gray-50 p-4 border-l-2 border-gray-200">
+<div class="code-block text-gray-600 text-sm"><span class="domain-target">domain.tld</span>. TXT "v=spf1 include:_spf.hostedemail.com ~all"</div>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-bold text-black uppercase tracking-wider mb-4 border-l-4 border-accent pl-3">Email Client</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-4 bg-white border border-gray-200 shadow-sm">
+<p class="text-xs text-gray-400 uppercase font-bold mb-1">Usuario / Email</p>
+<p class="text-lg text-accent font-medium">nombre@<span class="domain-target">domain.tld</span></p>
+</div>
+<div class="p-4 bg-white border border-gray-200 shadow-sm">
+<p class="text-xs text-gray-400 uppercase font-bold mb-1">Contraseña</p>
+<p class="text-lg text-gray-800 font-medium">********</p>
+</div>
+<div class="p-4 bg-white border border-gray-200 shadow-sm md:col-span-2">
+<p class="text-xs text-gray-400 uppercase font-bold mb-1">Host (IMAP & SMTP)</p>
+<p class="text-lg text-gray-800 code-block">mail.hostedemail.com</p>
+</div>
+<div class="p-4 bg-white border border-gray-200 shadow-sm">
+<p class="text-xs text-gray-400 uppercase font-bold mb-1">Seguridad</p>
+<p class="text-lg text-green-600 font-bold flex items-center">
+SSL Activado
+</p>
+</div>
+<div class="p-4 bg-white border border-gray-200 shadow-sm">
+<p class="text-xs text-gray-400 uppercase font-bold mb-1">Puertos</p>
+<div class="flex space-x-4">
+<div><span class="text-gray-500 text-xs">IMAP:</span> <span class="text-gray-900 font-bold">993</span></div>
+<div><span class="text-gray-500 text-xs">SMTP:</span> <span class="text-gray-900 font-bold">587</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center text-xs text-gray-300">Configuración generada automáticamente</div>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+const input = document.getElementById('domainInput');
+const configPanel = document.getElementById('configPanel');
+const emptyState = document.getElementById('emptyState');
+const targets = document.querySelectorAll('.domain-target');
+const defaultDomain = 'domain.tld';
+
+input.addEventListener('input', (e) => {
+const val = e.target.value.trim();
+if (val.length > 0) {
+configPanel.classList.add('is-visible');
+emptyState.style.opacity = '0';
+} else {
+configPanel.classList.remove('is-visible');
+emptyState.style.opacity = '1';
+}
+const displayDomain = val.length > 0 ? val : defaultDomain;
+targets.forEach(span => {
+span.textContent = displayDomain;
+});
+});
+});
+</script>
+</body>
+</html>
+`} />

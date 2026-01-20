@@ -33,7 +33,6 @@
             {
               "group": "Correo Electrónico",
               "pages": [
-                "docs/correo-electronico/generador-de-configuracion",
                 "email/registros",
                 "email/migracion-de-correo",
                 "email/webmail",

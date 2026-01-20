@@ -35,12 +35,11 @@ Entradas DNS necesarias para el correcto funcionamiento de los servicios de corr
     <Warning>
       **Verifique** de que no existan otras entradas de registro MX; de lo contrario tendrá problemas con su correo electrónico.
     </Warning>
-    | Tipo  | Host                | Destino                               | Prioridad | Tiempo de vida                      |
-    | ----- | ------------------- | ------------------------------------- | --------- | ----------------------------------- |
-    | MX    | @ o dejar en blanco | **mx1.emailsrvr.com**                 | 10        | 3600 segundos o el mínimo permitido |
-    | MX    | @ o dejar en blanco | **mx1.emailsrvr.com**                 | 10        | 3600 segundos o el mínimo permitido |
-    | TXT   | @ o dejar en blanco | **v=spf1 include:emailsrvr.com ~all** | N/A       | 3600 segundos o el mínimo permitido |
-    | CNAME | autodiscover        | **autodiscover.emailsrvr.com**        | N/A       | 3600 segundos o el mínimo permitido |
+    | Tipo  | Host                | Destino                                            | Prioridad | Tiempo de vida                      |
+    | ----- | ------------------- | -------------------------------------------------- | --------- | ----------------------------------- |
+    | MX    | @ o dejar en blanco | **mx.<u>ejemplo.com</u>.cust.a.hostedemail.com**   | 10        | 3600 segundos o el mínimo permitido |
+    | TXT   | @ o dejar en blanco | **v=spf1 include:\_spf.hostedemail.com ~all**      | N/A       | 3600 segundos o el mínimo permitido |
+    | CNAME | mail.ejemplo.com    | **mail.<u>ejemplo.com</u>.cust.a.hostedemail.com** | N/A       | 3600 segundos o el mínimo permitido |
   </Step>
   <Step title="Guarde los cambios">
     Una vez que haya finalizado con la configuración DNS para su dominio, guarde los cambios y espere la propagación DNS.

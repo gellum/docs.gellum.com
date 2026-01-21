@@ -14,6 +14,7 @@
           {
             "anchor": "Gellum OpenSource",
             "icon": "osi",
+            "hidden": true,
             "href": "https://gellum.com/opensource"
           }
         ]

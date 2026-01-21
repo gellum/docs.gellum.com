@@ -60,7 +60,8 @@
         {
           "tab": "Legal",
           "pages": [
-            "legal/terminos-y-condiciones"
+            "legal/terminos-y-condiciones",
+            "legal/politicas-de-privacidad"
           ]
         },
         {

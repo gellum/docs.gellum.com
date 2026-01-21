@@ -58,6 +58,12 @@
           ]
         },
         {
+          "tab": "Legal",
+          "pages": [
+            "legal/terminos-y-condiciones"
+          ]
+        },
+        {
           "tab": "Plugins",
           "groups": [
             {

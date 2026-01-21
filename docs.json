@@ -61,11 +61,11 @@
         {
           "tab": "Legal",
           "pages": [
-            "legal/politica-de-cookies",
             "legal/terminos-y-condiciones",
             "legal/politicas-de-privacidad",
             "legal/politica-de-devolucion",
             "legal/politica-de-uso-aceptable-aup",
+            "legal/politica-de-cookies",
             "legal/sla",
             "legal/dmca"
           ]

@@ -2,11 +2,10 @@
 title: "Buscar host DNS"
 description: "Aprenda a encontrar su host DNS"
 ---
+
 import Ayuda from '/snippets/ayuda.mdx';
 
-Esta documentación te guiará a través del proceso de utilizar [**Whois**](https://gellum.com/dominios/whois) para descubrir el host DNS de un dominio, proporcionándote los pasos claros y sencillos para que puedas realizar esta búsqueda de manera efectiva.
-
-**¿No tiene conocimientos técnicos?** Salte hasta "[Herramienta Whois de Gellum](#herramienta-whois-de-gellum)"
+Esta documentación te guiará a través del proceso de utilizar **Whois** para descubrir el host DNS de un dominio, proporcionándote los pasos claros y sencillos para que puedas realizar esta búsqueda de manera efectiva.
 
 En la mayoría de los casos puedes utilizar herramientas de línea de comandos si tienes conocimientos técnicos más avanzados (como el comando whois en sistemas Linux o macOS)
 
@@ -26,45 +25,10 @@ o, una alternativa similar:
 whois google.com | grep "Nserver"
 ```
 
-## Herramienta Whois de Gellum
-
-A pesar de que existen numerosas herramientas Whois disponibles en línea, Gellum pone a su disposición una [herramienta Whois](https://gellum.com/dominios/whois) gratuita y fácil de usar.
-
-<Steps>
-  <Step title="Accede a una herramienta Whois">
-    Accede a https://gellum.com/dominios/whois
-
-    ![1 Whous Gellum Pn](/images/1-whous-gellum.png)
-  </Step>
-  <Step title="Buscar dominio">
-    Ingresa el nombre de dominio para conocer todos los detalles, y no menos importante, sus servidores de nombre (NS) que controlan los DNS.
-
-    Escribe el dominio sin caracteres especiales (a excepción de "-" si el dominio lo tiene) y no incluya `http://` o `https://`.
-
-    <Info>
-      Esta función solo está disponible para el dominio principal (p.ej.: gellum.com) y no para los subdominios (p.ej.: docs.gellum.com)
-    </Info>
-    ![2 Whois Gellum Pn](/images/2-whois-gellum.png)
-  </Step>
-  <Step title="Identifica el Host DNS">
-    Nuestra [herramienta Whois](https://gellum.com/dominios/whois) te proporcionará una gran cantidad de información sobre el dominio. Busca secciones o campos que contengan información relacionada con los servidores de nombres o "Name Servers". Generalmente, estos campos estarán etiquetados como:
-
-    - `Name Server:`
-    - `Nserver:`
-    - `DNS Server:`
-
-    En estos campos, encontrarás los nombres de los servidores DNS responsables del dominio consultado. Pueden aparecer uno o varios servidores listados. Estos nombres de servidor a menudo tienen un formato como `ns1.proveedordns.com` o `dns2.otroproveedor.net`.
-
-    ![3 Whois Gellum Pn](/images/3-whois-gellum.png)
-
-    Como se observa en la [herramienta](https://gellum.com/dominios/whois), Cloudflare es el host DNS de Gellum.com, por lo que para configurar nuestros registros DNS debemos ingresar a Cloudflare.com.
-  </Step>
-</Steps>
-
-Esperamos que esta explicación y [herramienta whois](https://gellum.com/dominios/whois) sea de ayuda para que puedas verificar el host DNS de un dominio.
+Esperamos que esta explicación sea de ayuda para que pueda verificar el host DNS de un dominio.
 
 <Tip>
-  Sabiendo el host DNS podrás modificar tus registros DNS para [configurar los registros MX de Gellum Mailbox](/email/registros) y otros registros importantes.
+  Sabiendo el host DNS podrá modificar sus registros DNS para [configurar los registros MX de Gellum Mailbox](/email/registros) y otros registros importantes.
 </Tip>
 
 <Ayuda />

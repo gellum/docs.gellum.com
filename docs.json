@@ -61,6 +61,7 @@
         {
           "tab": "Legal",
           "pages": [
+            "legal/politica-de-cookies",
             "legal/terminos-y-condiciones",
             "legal/politicas-de-privacidad",
             "legal/politica-de-devolucion",

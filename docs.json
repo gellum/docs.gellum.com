@@ -27,7 +27,6 @@
               "group": "Inicio",
               "pages": [
                 "introduccion",
-                "como-comprar",
                 "estado-del-sistema"
               ]
             },
@@ -36,9 +35,7 @@
               "pages": [
                 "email/registros",
                 "email/webmail",
-                "email/configurar-servidor",
-                "email/reenvio",
-                "email/limites-de-envio"
+                "email/configurar-servidor"
               ]
             },
             {

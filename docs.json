@@ -91,16 +91,10 @@
         "dark": "/logo/dark.svg"
     },
     "navbar": {
-        "links": [
-            {
-                "label": "Contacto",
-                "href": "https://gellum.com/contacto"
-            }
-        ],
-        "primary": {
+      "primary": {
             "type": "button",
-            "label": "Mi cuenta",
-            "href": "https://gellum.com/mi-cuenta"
+            "label": "Contact",
+            "href": "https://gellum.com/contact"
         }
     },
     "footer": {
